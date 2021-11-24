@@ -1,17 +1,17 @@
 # RATL
 This code is the implementation of the paper "A Relationship-Aligned Transfer Learning Algorithm for Time Series Forecasting".
 Instruction on the code:
-## Training base encoder and regressor
+**Training base encoder and regressor** <br/>
 Once the data preparation is completed, we can train the base encoder and regressor for it.    <br/>
-python dataset:\train.py --lr1 0.1 --train_epochs1 200 --window 1 --neg_samples 10 --compared length None --compute_linear True  
+'<python dataset:\train.py --lr1 0.1 --train_epochs1 200 --window 1 --neg_samples 10 --compared length None --compute_linear True>'  
 
-Transfer  <br/>
-Once the source and target encoders and regressors are trained, we can implement the transfer phase. Separately run stage_1 and stage_2 in RATL.py    
-python transfer:\RATL.py --mode_1 False --train_epochs2 1000 --compute_2 True --mode_2 True --encode_pred_num 1 --encode_window 56 --test_pred_term 56  
+**Transfer**  <br/>
+Once the source and target encoders and regressors are trained, we can implement the transfer phase. Separately run stage_1 and stage_2 in RATL.py    <br/>
+'<python transfer:\RATL.py --mode_1 False --train_epochs2 1000 --compute_2 True --mode_2 True --encode_pred_num 1 --encode_window 56 --test_pred_term 56>'
 
-loda model  
-After traning and transfer phases, we can load the saved models to predict the test data    
-python transfer:\get_encoder_linear.py  
+**loda model**  
+After traning and transfer phases, we can load the saved models to predict the test data    <br/>
+'<python transfer:\get_encoder_linear.py>'
 
 We run this code on cpu, you can change it according to the configuration.  
 # References  

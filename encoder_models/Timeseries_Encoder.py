@@ -1,6 +1,5 @@
 import torch.utils.data
 import sklearn
-import sklearn.svm
 import datetime
 import sys
 import losses as losses

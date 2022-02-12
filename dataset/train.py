@@ -95,11 +95,11 @@ def encoder_linear_train(train, train_, test_,
     #train_, test_ = train.reshape((train.shape[0], -1)), test.reshape((test.shape[0], -1))
 
     if compute_representation:
-        train_features = encoder.encode_window_new(train_, encode_pred_num, encode_window, 'train')
+        train_features = encoder.encode_window_new(train_, encode_window, encode_pred_num, 'train')
         with open(storage_train, 'wb') as f:
             pkl.dump([train_features], f)
 #####################################################################################
-        test_features = encoder.encode_window_new(test_, encode_pred_num, encode_window, 'test')
+        test_features = encoder.encode_window_new(test_,  encode_window, encode_pred_num, 'test')
 #####################################################################################
         with open(storage_test, 'wb') as f:
             pkl.dump([test_features], f)
